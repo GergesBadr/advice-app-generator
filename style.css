@@ -1,0 +1,81 @@
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Manrope", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-blue);
+}
+.container {
+  position: relative;
+  width: 500px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 5px 10px 12px rgb(0, 0, 0, 0.3);
+  background-color: var(--dark-grayish-blue);
+}
+.quote-info {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--neon-green);
+}
+.quote-text {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--light-cyan);
+}
+.quote-text::before {
+  content: "\275D";
+}
+.quote-text::after {
+  content: "\275E";
+}
+.divider {
+  width: 85%;
+  height: 25px;
+  margin: 0px auto 25px;
+  background-image: url(images/pattern-divider-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.generate-quote {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+  background: var(--neon-green);
+}
+.generate-quote:hover {
+  box-shadow: 0px 0px 20px 4px var(--neon-green);
+}
+.generate-quote img {
+  width: 20px;
+}
+@media (max-width: 767px) {
+  body {
+    margin-inline: 10px;
+  }
+}
